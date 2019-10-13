@@ -1,0 +1,13 @@
+C:\Users\FedorovA\source\repos\Automats 1\Automats 1\bin\Debug\Automats 1.exe.config
+C:\Users\FedorovA\source\repos\Automats 1\Automats 1\bin\Debug\Automats 1.exe
+C:\Users\FedorovA\source\repos\Automats 1\Automats 1\bin\Debug\Automats 1.pdb
+C:\Users\FedorovA\source\repos\Automats 1\Automats 1\obj\Debug\Automats 1.csprojResolveAssemblyReference.cache
+C:\Users\FedorovA\source\repos\Automats 1\Automats 1\obj\Debug\Automats 1.csproj.CoreCompileInputs.cache
+C:\Users\FedorovA\source\repos\Automats 1\Automats 1\obj\Debug\Automats 1.exe
+C:\Users\FedorovA\source\repos\Automats 1\Automats 1\obj\Debug\Automats 1.pdb
+C:\Users\Home\Документы\Visual Studio 2013\Projects\Automats 1\Automats 1\bin\Debug\Automats 1.exe.config
+C:\Users\Home\Документы\Visual Studio 2013\Projects\Automats 1\Automats 1\obj\Debug\Automats 1.exe
+C:\Users\Home\Документы\Visual Studio 2013\Projects\Automats 1\Automats 1\obj\Debug\Automats 1.pdb
+C:\Users\Home\Документы\Visual Studio 2013\Projects\Automats 1\Automats 1\obj\Debug\Automats 1.csprojResolveAssemblyReference.cache
+C:\Users\Home\Документы\Visual Studio 2013\Projects\Automats 1\Automats 1\bin\Debug\Automats 1.exe
+C:\Users\Home\Документы\Visual Studio 2013\Projects\Automats 1\Automats 1\bin\Debug\Automats 1.pdb
