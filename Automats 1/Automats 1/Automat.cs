@@ -134,83 +134,109 @@ namespace Automats_1
             KeyValuePair<bool, int> kvp = new KeyValuePair<bool, int>(res, m);
             int curState = this.S;
             int i = l;
+            int isValid = 0;
             string digit = String.Empty;
             List<string> digitList = new List<string>();
             List<string> digitListInF = new List<string>();
             while (i < str.Length)
             {
-                int strIndex = GetIndex(Sigma, str[i]);
-                int strIndexNext = strIndex;
-                if (i != str.Length - 1)
+                if (!Sigma.Contains(str[i]))
                 {
-                    strIndexNext = GetIndex(Sigma, str[i + 1]);
+                    i++;
                 }
-                if (this.T[curState + 1, strIndex + 1] != "z")
+                else
                 {
-                    curState = int.Parse(this.T[curState + 1, strIndex + 1]);
-                }
-                else if (this.T[curState + 1, strIndex + 1] == "z")
-                {
-                    if (digitListInF.Count == 0)
-                    {
-                       // digitList.Add(digit);
-                    }
-                    else
-                    {
-                        //digitList.Add(digitListInF.Last());
-                    }
-                    digit = String.Empty;
-                    curState = this.S;
-                    continue;
 
-                }
+                    int strIndex = GetIndex(Sigma, str[i]);
+                    int strIndexNext = strIndex;
+                    if (i != str.Length - 1)
+                    {
+                        strIndexNext = GetIndex(Sigma, str[i + 1]);
+                    }
+                    if (this.T[curState + 1, strIndex + 1] != "z")
+                    {
+                        //Console.WriteLine("Зашёл (0) != z: " + curState + " str: " + str[i] + " digit: " + digit);
+                        curState = int.Parse(this.T[curState + 1, strIndex + 1]);
+                    }
+
+                    else if (this.T[curState + 1, strIndex + 1] == "z" && isValid == 0)
+                    {
+                        //Console.WriteLine("Зашёл (1) == z: " + curState + " str: " + str[i] + " digit: " + digit);
+                        //if (digitListInF.Count == 0)
+                        //{
+                        //    digitList.Add(digit);
+                        //}
+                        //else
+                        //{
+                        //    digitList.Add(digitListInF.Last());
+                        //}
+                        //digitList.Add(digit);
+                        curState = this.S;
+                        digit = String.Empty;
+                        isValid = 1;
+                        //goto Next;
+                        continue;
+
+                    }
                     if (F.Contains(curState))
                     {
-                        
+
+                        //Console.WriteLine("Зашёл (2) Contains(curstate): " + curState + " str: " + str[i] + " digit: " + digit);
                         //m = i - l + 1;
                         res = true;
                         //kvp = new KeyValuePair<bool, int>(res, m);
                         digit = digit + str[i];
-                        digitList.Add(digit);
+                        // digitList.Add(digit);
                         if (this.T[curState + 1, strIndexNext + 1] == "z" && strIndex != strIndexNext)
                         {
-                            Console.WriteLine("ЗАШОЛ 1 " + digit);
                             digitListInF.Add(digit);
                         }
                         else if (this.T[curState + 1, strIndexNext + 1] != "z" && strIndex == strIndexNext)
                         {
-                            Console.WriteLine("ЗАШОЛ 2 " + digit);
                             digitListInF.Add(digit);
                         }
-                        else if (strIndex == strIndexNext && this.T[curState + 1, strIndexNext + 1] != "z" && !F.Contains(int.Parse(this.T[curState + 1, strIndexNext + 1])))
-                        {
-                            digitListInF.Add(digit);
-                        }
+                        //else if (strIndex == strIndexNext && this.T[curState + 1, strIndexNext + 1] != "z" && !F.Contains(int.Parse(this.T[curState + 1, strIndexNext + 1])))
+                        //{
+                        //    digitListInF.Add(digit);
+                        //}
                         //if (i == str.Length - 1)
                         //{
                         //    digitList.Add(digit);
                         //}
                         //Console.WriteLine(str[i] + " " + T[curState, 0]);
                     }
+
                     else
                     {
-                        digit = digit + str[i];
+                        //Console.WriteLine("Зашёл (3) else: " + curState + " str: " + str[i] + " digit: " + digit);
+                        if (strIndex == strIndexNext)
+                        {
+                            digitListInF.Add(digit);
+                        }
+                        else if (curState != 0)
+                        {
+                            digit = digit + str[i];
+                        }
                     }
-                
-                i++;
+                    i++;
+                    isValid = 0;
+                }
+
+
             }
             //foreach (var item in result)
             //{
             //    Console.WriteLine(item.Key + " " + item.Value);
             //}
             //return result;
-            var validDigits = digitList.Intersect(digitListInF);
+            //var validDigits = digitList.Intersect(digitListInF);
+            digitListInF.RemoveAll(x => x == String.Empty);
             foreach (var item in digitListInF)
             {
-                Console.WriteLine(item);
+                    Console.WriteLine(item); 
             }
 
-            //m = validDigits.Max(len => len.Length);
+            m = digitListInF.Max(len => len.Length);
             kvp = new KeyValuePair<bool, int>(res, m);
             result.Add(kvp);
             //Console.WriteLine(result[0]);
@@ -259,8 +285,7 @@ namespace Automats_1
         //    return result;
         //}
 
-
-
+       
 
     }
 }
