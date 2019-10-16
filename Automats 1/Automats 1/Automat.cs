@@ -126,122 +126,122 @@ namespace Automats_1
         //    }
         //}
 
-        public List<KeyValuePair<bool, int>> MaxString(string str, int l)
-        {
-            int m = 0;
-            bool res = false;
-            List<KeyValuePair<bool, int>> result = new List<KeyValuePair<bool, int>>();
-            KeyValuePair<bool, int> kvp = new KeyValuePair<bool, int>(res, m);
-            int curState = this.S;
-            int i = l;
-            int isValid = 0;
-            string digit = String.Empty;
-            List<string> digitList = new List<string>();
-            List<string> digitListInF = new List<string>();
-            while (i < str.Length)
-            {
-                if (!Sigma.Contains(str[i]))
-                {
-                    i++;
-                }
-                else
-                {
+        //public List<KeyValuePair<bool, int>> MaxString(string str, int l)
+        //{
+        //    int m = 0;
+        //    bool res = false;
+        //    List<KeyValuePair<bool, int>> result = new List<KeyValuePair<bool, int>>();
+        //    KeyValuePair<bool, int> kvp = new KeyValuePair<bool, int>(res, m);
+        //    int curState = this.S;
+        //    int i = l;
+        //    int isValid = 0;
+        //    string digit = String.Empty;
+        //    List<string> digitList = new List<string>();
+        //    List<string> digitListInF = new List<string>();
+        //    while (i < str.Length)
+        //    {
+        //        if (!Sigma.Contains(str[i]))
+        //        {
+        //            i++;
+        //        }
+        //        else
+        //        {
 
-                    int strIndex = GetIndex(Sigma, str[i]);
-                    int strIndexNext = strIndex;
-                    if (i != str.Length - 1)
-                    {
-                        strIndexNext = GetIndex(Sigma, str[i + 1]);
-                    }
-                    if (this.T[curState + 1, strIndex + 1] != "z")
-                    {
-                        //Console.WriteLine("Зашёл (0) != z: " + curState + " str: " + str[i] + " digit: " + digit);
-                        curState = int.Parse(this.T[curState + 1, strIndex + 1]);
-                    }
+        //            int strIndex = GetIndex(Sigma, str[i]);
+        //            int strIndexNext = strIndex;
+        //            if (i != str.Length - 1)
+        //            {
+        //                strIndexNext = GetIndex(Sigma, str[i + 1]);
+        //            }
+        //            if (this.T[curState + 1, strIndex + 1] != "z")
+        //            {
+        //                //Console.WriteLine("Зашёл (0) != z: " + curState + " str: " + str[i] + " digit: " + digit);
+        //                curState = int.Parse(this.T[curState + 1, strIndex + 1]);
+        //            }
 
-                    else if (this.T[curState + 1, strIndex + 1] == "z" && isValid == 0)
-                    {
-                        //Console.WriteLine("Зашёл (1) == z: " + curState + " str: " + str[i] + " digit: " + digit);
-                        //if (digitListInF.Count == 0)
-                        //{
-                        //    digitList.Add(digit);
-                        //}
-                        //else
-                        //{
-                        //    digitList.Add(digitListInF.Last());
-                        //}
-                        //digitList.Add(digit);
-                        curState = this.S;
-                        digit = String.Empty;
-                        isValid = 1;
-                        //goto Next;
-                        continue;
+        //            else if (this.T[curState + 1, strIndex + 1] == "z" && isValid == 0)
+        //            {
+        //                //Console.WriteLine("Зашёл (1) == z: " + curState + " str: " + str[i] + " digit: " + digit);
+        //                //if (digitListInF.Count == 0)
+        //                //{
+        //                //    digitList.Add(digit);
+        //                //}
+        //                //else
+        //                //{
+        //                //    digitList.Add(digitListInF.Last());
+        //                //}
+        //                //digitList.Add(digit);
+        //                curState = this.S;
+        //                digit = String.Empty;
+        //                isValid = 1;
+        //                //goto Next;
+        //                continue;
 
-                    }
-                    if (F.Contains(curState))
-                    {
+        //            }
+        //            if (F.Contains(curState))
+        //            {
 
-                        //Console.WriteLine("Зашёл (2) Contains(curstate): " + curState + " str: " + str[i] + " digit: " + digit);
-                        //m = i - l + 1;
-                        res = true;
-                        //kvp = new KeyValuePair<bool, int>(res, m);
-                        digit = digit + str[i];
-                        // digitList.Add(digit);
-                        if (this.T[curState + 1, strIndexNext + 1] == "z" && strIndex != strIndexNext)
-                        {
-                            digitListInF.Add(digit);
-                        }
-                        else if (this.T[curState + 1, strIndexNext + 1] != "z" && strIndex == strIndexNext)
-                        {
-                            digitListInF.Add(digit);
-                        }
-                        //else if (strIndex == strIndexNext && this.T[curState + 1, strIndexNext + 1] != "z" && !F.Contains(int.Parse(this.T[curState + 1, strIndexNext + 1])))
-                        //{
-                        //    digitListInF.Add(digit);
-                        //}
-                        //if (i == str.Length - 1)
-                        //{
-                        //    digitList.Add(digit);
-                        //}
-                        //Console.WriteLine(str[i] + " " + T[curState, 0]);
-                    }
+        //                //Console.WriteLine("Зашёл (2) Contains(curstate): " + curState + " str: " + str[i] + " digit: " + digit);
+        //                //m = i - l + 1;
+        //                res = true;
+        //                //kvp = new KeyValuePair<bool, int>(res, m);
+        //                digit = digit + str[i];
+        //                // digitList.Add(digit);
+        //                if (this.T[curState + 1, strIndexNext + 1] == "z" && strIndex != strIndexNext)
+        //                {
+        //                    digitListInF.Add(digit);
+        //                }
+        //                else if (this.T[curState + 1, strIndexNext + 1] != "z" && strIndex == strIndexNext)
+        //                {
+        //                    digitListInF.Add(digit);
+        //                }
+        //                //else if (strIndex == strIndexNext && this.T[curState + 1, strIndexNext + 1] != "z" && !F.Contains(int.Parse(this.T[curState + 1, strIndexNext + 1])))
+        //                //{
+        //                //    digitListInF.Add(digit);
+        //                //}
+        //                //if (i == str.Length - 1)
+        //                //{
+        //                //    digitList.Add(digit);
+        //                //}
+        //                //Console.WriteLine(str[i] + " " + T[curState, 0]);
+        //            }
 
-                    else
-                    {
-                        //Console.WriteLine("Зашёл (3) else: " + curState + " str: " + str[i] + " digit: " + digit);
-                        if (strIndex == strIndexNext)
-                        {
-                            digitListInF.Add(digit);
-                        }
-                        else if (curState != 0)
-                        {
-                            digit = digit + str[i];
-                        }
-                    }
-                    i++;
-                    isValid = 0;
-                }
+        //            else
+        //            {
+        //                //Console.WriteLine("Зашёл (3) else: " + curState + " str: " + str[i] + " digit: " + digit);
+        //                if (strIndex == strIndexNext)
+        //                {
+        //                    digitListInF.Add(digit);
+        //                }
+        //                else if (curState != 0)
+        //                {
+        //                    digit = digit + str[i];
+        //                }
+        //            }
+        //            i++;
+        //            isValid = 0;
+        //        }
 
 
-            }
-            //foreach (var item in result)
-            //{
-            //    Console.WriteLine(item.Key + " " + item.Value);
-            //}
-            //return result;
-            //var validDigits = digitList.Intersect(digitListInF);
-            digitListInF.RemoveAll(x => x == String.Empty);
-            foreach (var item in digitListInF)
-            {
-                    Console.WriteLine(item); 
-            }
+        //    }
+        //    //foreach (var item in result)
+        //    //{
+        //    //    Console.WriteLine(item.Key + " " + item.Value);
+        //    //}
+        //    //return result;
+        //    //var validDigits = digitList.Intersect(digitListInF);
+        //    digitListInF.RemoveAll(x => x == String.Empty);
+        //    foreach (var item in digitListInF)
+        //    {
+        //            Console.WriteLine(item); 
+        //    }
 
-            m = digitListInF.Max(len => len.Length);
-            kvp = new KeyValuePair<bool, int>(res, m);
-            result.Add(kvp);
-            //Console.WriteLine(result[0]);
-            return result;
-        }
+        //    m = digitListInF.Max(len => len.Length);
+        //    kvp = new KeyValuePair<bool, int>(res, m);
+        //    result.Add(kvp);
+        //    //Console.WriteLine(result[0]);
+        //    return result;
+        //}
 
         //public List<KeyValuePair<bool, int>> MaxString(string str, int l)
         //{
@@ -285,7 +285,136 @@ namespace Automats_1
         //    return result;
         //}
 
-       
+
+        public List<KeyValuePair<bool, int>> MaxString(string str, int l)
+        {
+            int m = 0;
+            bool res = false;
+            List<KeyValuePair<bool, int>> result = new List<KeyValuePair<bool, int>>();
+            KeyValuePair<bool, int> kvp = new KeyValuePair<bool, int>(res, m);
+            int curState = this.S;
+            int i = l;
+            //int isValid = 0;
+           // string digit = String.Empty;
+            //List<string> digitList = new List<string>();
+           // List<string> digitListInF = new List<string>();
+            while (i < str.Length)
+            {
+                if (!Sigma.Contains(str[i]))
+                {
+                    //i++;
+                    //res = false;
+                    kvp = new KeyValuePair<bool, int>(res, m);
+                    result.Add(kvp);
+                    return result;
+                }
+                else
+                {
+
+                    int strIndex = GetIndex(Sigma, str[i]);
+                    int strIndexNext = strIndex;
+                    if (i != str.Length - 1)
+                    {
+                        strIndexNext = GetIndex(Sigma, str[i + 1]);
+                    }
+                    if (this.T[curState + 1, strIndex + 1] != "z")
+                    {
+                        if (strIndexNext != strIndex)
+                        {
+                            m++;
+                        }
+                        //Console.WriteLine(str[i]);
+                        curState = int.Parse(this.T[curState + 1, strIndex + 1]);
+                        if (F.Contains(curState))
+                        {
+                            res = true;
+                            if (strIndex == strIndexNext)
+                            {
+                                m++;
+                                kvp = new KeyValuePair<bool, int>(res, m);
+                                result.Add(kvp);
+                                return result;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        kvp = new KeyValuePair<bool, int>(res, m);
+                        result.Add(kvp);
+                        return result;
+                    }
+                    i++;
+
+                    //if (this.T[curState + 1, strIndex + 1] == "z")
+                    //{
+                    //    //res = false;
+                    //    kvp = new KeyValuePair<bool, int>(res, m);
+                    //    result.Add(kvp);
+                    //    return result;
+
+                    //}
+                    //else if (F.Contains(curState))
+                    //{
+
+                    //    //m = i - l + 1;
+                    //    m++;
+                    //    res = true;
+                    //    //digit = digit + str[i];
+
+                    //    //if (this.T[curState + 1, strIndexNext + 1] == "z" && strIndex != strIndexNext)
+                    //    //{
+                    //    //    //digitListInF.Add(digit);
+                    //    //    kvp = new KeyValuePair<bool, int>(res, m);
+                    //    //    result.Add(kvp);
+                    //    //    return result;
+                    //    //}
+                    //    //else if (this.T[curState + 1, strIndexNext + 1] != "z" && strIndex == strIndexNext)
+                    //    //{
+                    //    //   // digitListInF.Add(digit);
+                    //    //    kvp = new KeyValuePair<bool, int>(res, m);
+                    //    //    result.Add(kvp);
+                    //    //    return result;
+                    //    //}
+                    //}
+
+                    //else if (strIndexNext != strIndex)
+                    //{
+                    //    m++;
+                    //}
+                    //i++;
+                }
+
+
+            }
+            kvp = new KeyValuePair<bool, int>(res, m);
+            result.Add(kvp);
+            return result;
+
+
+            //if (res)
+            //{
+            //    kvp = new KeyValuePair<bool, int>(res, m);
+            //    result.Add(kvp);
+            //    return result;
+            //}
+            //else
+            //{
+            //    kvp = new KeyValuePair<bool, int>(res, m);
+            //    result.Add(kvp);
+            //    return result;
+            //}
+            //var validDigits = digitList.Intersect(digitListInF);
+            //digitListInF.RemoveAll(x => x == String.Empty);
+            //foreach (var item in digitListInF)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+           // m = digitListInF.Max(len => len.Length);
+            //kvp = new KeyValuePair<bool, int>(res, m);
+            //result.Add(kvp);
+            //return result;
+        }
 
     }
 }

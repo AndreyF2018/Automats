@@ -36,35 +36,37 @@ namespace Automats_1
            
             
             
-            Console.WriteLine(a.MaxString(str, 0)[0]); 
+            //Console.WriteLine(a.MaxString(str, 0)[0]); 
             
             
             
             List<KeyValuePair<bool, int>> resultMaxString = new List<KeyValuePair<bool, int>>();
             int k = 0;
             string resultStr = String.Empty;
-            //while (k < str.Length)
-            //{
-            //    resultMaxString = a.MaxString(str, k);
-            //    if (resultMaxString[0].Key == true && k == resultMaxString[0].Value)
-            //    {
-            //        str = str.Substring(k, resultMaxString[0].Value);
+            while (k < str.Length)
+            {
+                resultMaxString = a.MaxString(str, k);
+                //Console.WriteLine(resultMaxString[0].Key);
+                if (resultMaxString[0].Key == true )
+                {
+                    Console.WriteLine("Result: " + str.Substring(k, resultMaxString[0].Value));
+                    if (resultMaxString[0].Value == 0)
+                    {
+                        k++;
+                    }
+                    else
+                    {
+                        k += resultMaxString[0].Value;
+                    }
+                    //Console.WriteLine(k + " " + resultMaxString[0].Value);
 
-            //        if (resultMaxString[0].Value > 0)
-            //        {
-            //            k = k + resultMaxString[0].Value;
-            //        }
-            //        else
-            //        {
-            //            k++;
-            //        }
-            //        //Console.WriteLine(str.Substring(k, resultMaxString[0].Value));
-            //    }
-            //    else
-            //    {
-            //        k++;
-            //    }
-            //}
+                    //Console.WriteLine(str.Substring(k, resultMaxString[0].Value));
+                }
+                else
+                {
+                    k++;
+                }
+            }
             //Console.WriteLine(str);
 
 
