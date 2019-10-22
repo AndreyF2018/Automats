@@ -22,7 +22,7 @@ namespace Automats_1
 
                 for (int i = 0; i < Q.Length; i++)
                 {
-                    this.Q[i] = i + 1;
+                    this.Q[i] = int.Parse(table[i+2,0]);
                 }
 
                 for (int i = 0; i < table.GetLength(1) - 1; i++)
