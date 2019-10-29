@@ -1,0 +1,56 @@
+3
+keyword
+7 10 14 20 27 31 33 37 38 42 44 47 49
+51
+18
+A p r o g a m v e l s t i n b f h d
+0 1 11 z z z z 8 39 z 15 34 32 z 21 45 z 48
+1 z 2 z z z z z z z z z z z z z z z
+2 z z 3 z z z z z z z z z z z z z z
+3 z z z 4 z z z z z z z z z z z z z
+4 z 5 z z z z z z z z z z z z z z z
+5 z z z z 6 z z z z z z z z z z z z
+6 z z z z z 7 z z z z z z z z z z z
+7 z z z z z z z z z z z z z z z z z
+8 z z z z 9 z z z z z z z z z z z z
+9 z 10 z z z z z z z z z z z z z z z
+10 z z z z z z z z z z z z z z z z z
+11 z z z z z z z 12 z z z z z z z z z
+12 z z z z 13 z z z z z z z z z z z z
+13 z z z z z z z z 14 z z z z z z z z
+14 z z z z z z z z z z z z z z z z z
+15 z z z z z z z z z z 16 z z z z z z
+16 z 17 z z z z z z z z z z z z z z z
+17 z z z z z z z z z z z 18 z z z z z
+18 z z z z z z z z z z z z 19 z z z z
+19 z z z 20 z z z z z z z z z z z z z
+20 z z z z z z z z z z z z z z z z z
+21 z z 22 z z z z 28 z z z z z z z z z
+22 z z 23 z z z z z z z z z z z z z z
+23 z z z z z z z 24 z z z z z z z z z
+24 z z z z z z z 25 z z z z z z z z z
+25 z z z z 26 z z z z z z z z z z z z
+26 z z z z z z z z z z z z 27 z z z z
+27 z z z z z z z z z z z z z z z z z
+28 z z z 29 z z z z z z z z z z z z z
+29 z z z z z z z z z z z 30 z z z z z
+30 z z z z z z z z z z z z 31 z z z z
+31 z z z z z z z z z z z z z z z z z
+32 z z z z z z z z z z z z z z 33 z z
+33 z z z z z z z z z z z z z z z z z
+34 z z 38 z z z z z z z z z z z z 35 z
+35 z z z z z z z 36 z z z z z z z z z
+36 z z z z z z z z z z z z 37 z z z z
+37 z z z z z z z z z z z z z z z z z
+38 z z z z z z z z z z z z z z z z z
+39 z z z z z z z z 40 z z z z z z z z
+40 z z z z z z z z z 41 z z z z z z z
+41 z z z z z z z 42 z z z z z z z z z
+42 z z z z z z z z z z z z z z z z z
+43 z z z z z z z z z z z z z z z z 44
+44 z z z z z z z z z z z z z z z z z
+45 z z 46 z z z z z z z z z z z z z z
+46 z 47 z z z z z z z z z z z z z z z
+47 z z z z z z z z z z z z z z z z z
+48 z z 49 z z z z z z z z z z z z z z
+49 z z z z z z z z z z z z z z z z
