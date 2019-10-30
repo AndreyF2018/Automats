@@ -18,7 +18,7 @@ namespace Lexical_analysis
                 str = System.Text.Encoding.Default.GetString(array).ToLower();
             }
 
-            Automat a = new Automat("CommentsAutomat.txt");
+            Automat a = new Automat("StrAutomat.txt");
 
             // List<KeyValuePair<bool, int>> resultMaxString = new List<KeyValuePair<bool, int>>();
             KeyValuePair<bool, int> resultMaxString = new KeyValuePair<bool, int>();

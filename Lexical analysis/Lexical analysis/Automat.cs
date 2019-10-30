@@ -38,11 +38,8 @@ namespace Lexical_analysis
                 Q[i] = int.Parse(table[i + 1, 0]);
                 //Console.WriteLine(Q[i]);
             }
-            Sigma = new char[table.GetLength(1) - 1];
-            for (int i = 0; i < table.GetLength(1) - 1; i++)
-            {
-                Sigma[i] = Char.Parse(table[0, i + 1]);
-            }
+            Sigma = DataReadSigma(fileName);
+
 
             T = new string[table.GetLength(0), table.GetLength(1)];
             for (int i = 0; i < table.GetLength(0); i++)
@@ -59,9 +56,9 @@ namespace Lexical_analysis
         }
         public string[,] DataReadStates(string fileName)
         {
-            int countCol = int.Parse(File.ReadAllLines(fileName).Skip(3).First());
-            int countStr = int.Parse(File.ReadAllLines(fileName).Skip(4).First());
-            int skipIndex = 5;
+            int countCol = int.Parse(File.ReadAllLines(fileName).Skip(4).First());
+            int countStr = int.Parse(File.ReadAllLines(fileName).Skip(5).First());
+            int skipIndex = 6;
             //string lines = File.ReadAllLines("Automat.txt").Skip(skipIndex).First();
             string[,] states = new string[countCol, countStr];
             for (int i = 0; i < countCol; i++)
@@ -80,14 +77,21 @@ namespace Lexical_analysis
         }
         public int[] DataReadF(string fileName)
         {
-            string lines = File.ReadLines(fileName).Skip(2).First();
+            string lines = File.ReadLines(fileName).Skip(3).First();
             int[] result = lines.Split(' ').Select(n => Convert.ToInt32(n)).ToArray();
+            return result;
+
+        }
+        public char[] DataReadSigma(string fileName)
+        {
+            string lines = File.ReadLines(fileName).Skip(2).First();
+            char[] result = lines.Split(' ').Select(n => Convert.ToChar(n)).ToArray();
             return result;
 
         }
 
 
-        public int GetIndex(char[] array, char value)
+        public int GetIndexElse(char[] array, char value)
         {
             int resultIndex = -1;
             for (int i = 0; i < array.Length; i++)
@@ -100,19 +104,80 @@ namespace Lexical_analysis
             }
             return resultIndex;
         }
-        public int GetIndex(string str, char value)
+
+        public int GetIndexForComments(char value)
         {
             int resultIndex = -1;
-            for (int i = 0; i < str.Length; i++)
+            if (value == '{')
             {
-                if (str[i] == value)
-                {
-                    resultIndex = i;
-                    break;
-                }
+                resultIndex = 0;
+            }
+            else if (value == '}')
+            {
+                resultIndex = 2;
+            }
+            else
+            {
+                resultIndex = 1;
             }
             return resultIndex;
         }
+
+        public int GetIndexForID (char value)
+        {
+             int resultIndex = -1;
+            if (Char.IsLetter(value))
+            {
+                resultIndex = 0;
+            }
+            else if (Char.IsDigit(value))
+            {
+                resultIndex = 1;
+            }
+            else 
+            {
+                resultIndex  = 2;
+            }
+            return resultIndex;
+        }
+
+        public int GetIndexForStr(char value)
+        {
+            int resultIndex = -1;
+            if (value == '"')
+            {
+                resultIndex = 0;
+            }
+            else
+            {
+                resultIndex = 1;
+            }
+            return resultIndex;
+        }
+
+        public int GetIndex(string lexeme, char value)
+        {
+            int resultIndex = -1;
+            if (lexeme == "Comments")
+            {
+                resultIndex = GetIndexForComments(value);
+            }
+            else if (lexeme == "ID")
+            {
+                resultIndex = GetIndexForID(value);
+            }
+            else if(lexeme == "Str")
+            {
+                resultIndex = GetIndexForStr(value);
+            }
+            else
+            {
+                resultIndex = GetIndexElse(Sigma, value);
+            }
+
+            return resultIndex;
+        }
+
 
 
         // public List<KeyValuePair<bool, int>> MaxString(string str, int l)
@@ -140,11 +205,12 @@ namespace Lexical_analysis
                 else
                 {
 
-                    int strIndex = GetIndex(Sigma, str[i]);
+                    //int strIndex = GetIndexElse(Sigma, str[i]);
+                    int strIndex = GetIndex(lexeme, str[i]);
                     int strIndexNext = strIndex;
                     if (i != str.Length - 1)
                     {
-                        strIndexNext = GetIndex(Sigma, str[i + 1]);
+                        strIndexNext = GetIndexElse(Sigma, str[i + 1]);
                     }
                     if (this.T[curState + 1, strIndex + 1] != "z")
                     {

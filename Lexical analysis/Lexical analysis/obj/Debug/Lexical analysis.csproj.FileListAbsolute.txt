@@ -4,3 +4,9 @@ c:\users\home\документы\visual studio 2013\Projects\Lexical analysis\Le
 c:\users\home\документы\visual studio 2013\Projects\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.exe
 c:\users\home\документы\visual studio 2013\Projects\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.pdb
 c:\users\home\документы\visual studio 2013\Projects\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.csprojResolveAssemblyReference.cache
+C:\Git\Automats\Lexical analysis\Lexical analysis\bin\Debug\Lexical analysis.exe.config
+C:\Git\Automats\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.exe
+C:\Git\Automats\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.pdb
+C:\Git\Automats\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.csprojResolveAssemblyReference.cache
+C:\Git\Automats\Lexical analysis\Lexical analysis\bin\Debug\Lexical analysis.exe
+C:\Git\Automats\Lexical analysis\Lexical analysis\bin\Debug\Lexical analysis.pdb
