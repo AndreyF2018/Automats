@@ -1,4 +1,4 @@
-3
+2
 keyword
 p r o g a m v e l s t i n b f h d
 7 10 14 20 27 31 33 37 38 42 44 47 49
@@ -28,7 +28,7 @@ A p r o g a m v e l s t i n b f h d
 20 z z z z z z z z z z z z z z z z z
 21 z z 22 z z z z 28 z z z z z z z z z
 22 z z 23 z z z z z z z z z z z z z z
-23 z z z z z z z 24 z z z z z z z z z
+23 z z z z z z z z 24 z z z z z z z z
 24 z z z z z z z 25 z z z z z z z z z
 25 z z z z 26 z z z z z z z z z z z z
 26 z z z z z z z z z z z z 27 z z z z

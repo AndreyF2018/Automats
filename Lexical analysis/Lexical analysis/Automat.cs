@@ -23,14 +23,14 @@ namespace Lexical_analysis
             lexeme = File.ReadLines(fileName).Skip(1).First();
             string[,] table = DataReadStates(fileName);
 
-            for (int i = 0; i < table.GetLength(0); i++)
-            {
-                for (int j = 0; j < table.GetLength(1); j++)
-                {
-                    Console.Write(table[i, j] + " ");
-                }
-                Console.WriteLine();
-            }
+            //for (int i = 0; i < table.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < table.GetLength(1); j++)
+            //    {
+            //        Console.Write(table[i, j] + " ");
+            //    }
+            //    Console.WriteLine();
+            //}
 
             Q = new int[table.GetLength(0)-1];
             for (int i = 0; i < Q.Length; i++)
@@ -39,8 +39,7 @@ namespace Lexical_analysis
                 //Console.WriteLine(Q[i]);
             }
             Sigma = DataReadSigma(fileName);
-
-
+     
             T = new string[table.GetLength(0), table.GetLength(1)];
             for (int i = 0; i < table.GetLength(0); i++)
             {
@@ -85,9 +84,21 @@ namespace Lexical_analysis
         public char[] DataReadSigma(string fileName)
         {
             string lines = File.ReadLines(fileName).Skip(2).First();
-            char[] result = lines.Split(' ').Select(n => Convert.ToChar(n)).ToArray();
+            //char[] result = lines.Split(' ').Select(n => Convert.ToChar(n)).ToArray();
+            char[] result = lines.Split().Select(n => Convert.ToChar(n)).ToArray();
             return result;
 
+        }
+        
+        public int GetPriority()
+        {
+
+            return priority;
+        }
+
+        public string GetLexeme()
+        {
+            return lexeme;
         }
 
 
