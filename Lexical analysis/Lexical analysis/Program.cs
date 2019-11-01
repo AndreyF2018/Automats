@@ -45,6 +45,7 @@ namespace Lexical_analysis
             {
                 if (Char.IsWhiteSpace(str[k]))
                 {
+                    sw.WriteLine("WhiteSpace: " + str[k]);
                     Console.WriteLine("WhiteSpace: " + str[k]);
                     k++;
                 }
@@ -74,16 +75,19 @@ namespace Lexical_analysis
                     }
                     if (m > 0)
                     {
+                        sw.WriteLine(curLex + ": " + str.Substring(k, m));
                         Console.WriteLine(curLex + ": " + str.Substring(k, m));
                         k += m;
                     }
                     else if (m == 0)
                     {
+                        sw.WriteLine("Error" + str[k]);
                         Console.WriteLine("Error" + str[k]);
                         k++;
                     }
                 }
             }
+            sw.Close();
         }
     }
 }
