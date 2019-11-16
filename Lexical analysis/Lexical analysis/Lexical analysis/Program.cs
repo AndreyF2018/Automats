@@ -21,6 +21,8 @@ namespace Lexical_analysis
             A.Add(new Automat("ParentheresOpenAutomat.txt"));
             A.Add(new Automat("SemicolonAutomat.txt"));
             A.Add(new Automat("StrAutomat.txt"));
+            A.Add(new Automat("WhiteSpaceAutomat.txt"));
+
             return A;
 
 
@@ -28,12 +30,26 @@ namespace Lexical_analysis
         static void Main(string[] args)
         {
             string str;
+            string origStr;
             using (FileStream fstream = File.OpenRead("input.txt"))
             {
                 byte[] array = new byte[fstream.Length];
                 fstream.Read(array, 0, array.Length);
                 str = System.Text.Encoding.Default.GetString(array).ToLower();
+                origStr = str;
             }
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append(str);
+            for (int i = 0; i < sb.Length; i++)
+            {
+                if (Char.IsWhiteSpace(sb[i]))
+                {
+                    sb.Replace(sb[i], '@');
+                }
+            }
+
+            str = sb.ToString();
             //Automat a = new Automat("NumAutomat.txt");
 
             // List<KeyValuePair<bool, int>> resultMaxString = new List<KeyValuePair<bool, int>>();
@@ -43,14 +59,6 @@ namespace Lexical_analysis
             StreamWriter sw = new StreamWriter("output.txt");
             while (k < str.Length)
             {
-                if (Char.IsWhiteSpace(str[k]))
-                {
-                    sw.WriteLine("WhiteSpace: " + str[k]);
-                    Console.WriteLine("WhiteSpace: " + str[k]);
-                    k++;
-                }
-                else
-                {
                     string curLex = String.Empty;
                     int curPr = 0;
                     int m = 0;
@@ -75,17 +83,16 @@ namespace Lexical_analysis
                     }
                     if (m > 0)
                     {
-                        sw.WriteLine(curLex + ": " + str.Substring(k, m));
-                        Console.WriteLine(curLex + ": " + str.Substring(k, m));
-                        k += m;
+                        sw.WriteLine("<" + curLex + ", " + origStr.Substring(k, m) + ">");
+                        Console.WriteLine("<" + curLex + ", " + origStr.Substring(k, m) + ">");
+                    k += m;
                     }
                     else if (m == 0)
                     {
-                        sw.WriteLine("Error" + str[k]);
-                        Console.WriteLine("Error" + str[k]);
-                        k++;
+                    sw.WriteLine("<Error, " + origStr[k] + ">");
+                    Console.WriteLine("<Error, " + origStr[k] + ">");
+                    k++;
                     }
-                }
             }
             sw.Close();
         }

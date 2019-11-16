@@ -38,7 +38,9 @@ namespace Lexical_analysis
                 Q[i] = int.Parse(table[i + 1, 0]);
                 //Console.WriteLine(Q[i]);
             }
+
             Sigma = DataReadSigma(fileName);
+            
      
             T = new string[table.GetLength(0), table.GetLength(1)];
             for (int i = 0; i < table.GetLength(0); i++)
@@ -102,6 +104,7 @@ namespace Lexical_analysis
         }
 
 
+
         public int GetIndexElse(char[] array, char value)
         {
             int resultIndex = -1;
@@ -116,6 +119,16 @@ namespace Lexical_analysis
             return resultIndex;
         }
 
+        public int GetIndexForWS(char value)
+        {
+            int resultIndex = -1;
+            if (value == '@' )
+            {
+                resultIndex = 0;
+            }
+            return resultIndex;
+
+        }
         public int GetIndexForComments(char value)
         {
             int resultIndex = -1;
@@ -181,6 +194,10 @@ namespace Lexical_analysis
             {
                 resultIndex = GetIndexForStr(value);
             }
+            else if (lexeme == "WhiteSpace")
+            {
+                resultIndex = GetIndexForWS(value);
+            }
             else
             {
                 resultIndex = GetIndexElse(Sigma, value);
@@ -225,10 +242,6 @@ namespace Lexical_analysis
                     }
                     if (this.T[curState + 1, strIndex + 1] != "z")
                     {
-                        //if (strIndexNext != strIndex)
-                        //{
-                        //    m = i - l + 1;
-                        //}
                         curState = int.Parse(this.T[curState + 1, strIndex + 1]);
                         if (F.Contains(curState))
                         {
@@ -236,8 +249,6 @@ namespace Lexical_analysis
                             res = true;
                             if (strIndex == strIndexNext)
                             {
-                                //m++;
-                                //m = i - l + 1;
                                 kvp = new KeyValuePair<bool, int>(res, m);
                                 //result.Add(kvp);
                                 return kvp;
@@ -247,7 +258,6 @@ namespace Lexical_analysis
                     else
                     {
                         kvp = new KeyValuePair<bool, int>(res, m);
-                        //result.Add(kvp);
                         return kvp;
                     }
                     i++;

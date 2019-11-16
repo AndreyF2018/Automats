@@ -1,0 +1,31 @@
+c:\users\home\документы\visual studio 2013\Projects\Lexical analysis\Lexical analysis\bin\Debug\Lexical analysis.exe.config
+c:\users\home\документы\visual studio 2013\Projects\Lexical analysis\Lexical analysis\bin\Debug\Lexical analysis.exe
+c:\users\home\документы\visual studio 2013\Projects\Lexical analysis\Lexical analysis\bin\Debug\Lexical analysis.pdb
+c:\users\home\документы\visual studio 2013\Projects\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.exe
+c:\users\home\документы\visual studio 2013\Projects\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.pdb
+c:\users\home\документы\visual studio 2013\Projects\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.csprojResolveAssemblyReference.cache
+C:\Git\Automats\Lexical analysis\Lexical analysis\bin\Debug\Lexical analysis.exe.config
+C:\Git\Automats\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.exe
+C:\Git\Automats\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.pdb
+C:\Git\Automats\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.csprojResolveAssemblyReference.cache
+C:\Git\Automats\Lexical analysis\Lexical analysis\bin\Debug\Lexical analysis.exe
+C:\Git\Automats\Lexical analysis\Lexical analysis\bin\Debug\Lexical analysis.pdb
+C:\Users\FedorovA\Downloads\Automats-master\Lexical analysis\Lexical analysis\bin\Debug\Lexical analysis.exe.config
+C:\Users\FedorovA\Downloads\Automats-master\Lexical analysis\Lexical analysis\bin\Debug\Lexical analysis.exe
+C:\Users\FedorovA\Downloads\Automats-master\Lexical analysis\Lexical analysis\bin\Debug\Lexical analysis.pdb
+C:\Users\FedorovA\Downloads\Automats-master\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.csprojResolveAssemblyReference.cache
+C:\Users\FedorovA\Downloads\Automats-master\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.csproj.CoreCompileInputs.cache
+C:\Users\FedorovA\Downloads\Automats-master\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.exe
+C:\Users\FedorovA\Downloads\Automats-master\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.pdb
+C:\Users\FedorovA\Downloads\Lexical analysis\Lexical analysis\bin\Debug\Lexical analysis.exe.config
+C:\Users\FedorovA\Downloads\Lexical analysis\Lexical analysis\bin\Debug\Lexical analysis.exe
+C:\Users\FedorovA\Downloads\Lexical analysis\Lexical analysis\bin\Debug\Lexical analysis.pdb
+C:\Users\FedorovA\Downloads\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.csprojResolveAssemblyReference.cache
+C:\Users\FedorovA\Downloads\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.csproj.CoreCompileInputs.cache
+C:\Users\FedorovA\Downloads\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.exe
+C:\Users\FedorovA\Downloads\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.pdb
+C:\Git\Automats\Lexical analysis\Lexical analysis\Lexical analysis\bin\Debug\Lexical analysis.exe.config
+C:\Git\Automats\Lexical analysis\Lexical analysis\Lexical analysis\bin\Debug\Lexical analysis.exe
+C:\Git\Automats\Lexical analysis\Lexical analysis\Lexical analysis\bin\Debug\Lexical analysis.pdb
+C:\Git\Automats\Lexical analysis\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.exe
+C:\Git\Automats\Lexical analysis\Lexical analysis\Lexical analysis\obj\Debug\Lexical analysis.pdb
