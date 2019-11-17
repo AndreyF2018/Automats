@@ -1,0 +1,11 @@
+C:\Users\Admin\Documents\Visual Studio 2019\Projects\Regular expression\Regular expression\bin\Debug\netcoreapp3.0\Regular expression.exe
+C:\Users\Admin\Documents\Visual Studio 2019\Projects\Regular expression\Regular expression\bin\Debug\netcoreapp3.0\Regular expression.deps.json
+C:\Users\Admin\Documents\Visual Studio 2019\Projects\Regular expression\Regular expression\bin\Debug\netcoreapp3.0\Regular expression.runtimeconfig.json
+C:\Users\Admin\Documents\Visual Studio 2019\Projects\Regular expression\Regular expression\bin\Debug\netcoreapp3.0\Regular expression.runtimeconfig.dev.json
+C:\Users\Admin\Documents\Visual Studio 2019\Projects\Regular expression\Regular expression\bin\Debug\netcoreapp3.0\Regular expression.dll
+C:\Users\Admin\Documents\Visual Studio 2019\Projects\Regular expression\Regular expression\bin\Debug\netcoreapp3.0\Regular expression.pdb
+C:\Users\Admin\Documents\Visual Studio 2019\Projects\Regular expression\Regular expression\obj\Debug\netcoreapp3.0\Regular expression.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\Visual Studio 2019\Projects\Regular expression\Regular expression\obj\Debug\netcoreapp3.0\Regular expression.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\Visual Studio 2019\Projects\Regular expression\Regular expression\obj\Debug\netcoreapp3.0\Regular expression.AssemblyInfo.cs
+C:\Users\Admin\Documents\Visual Studio 2019\Projects\Regular expression\Regular expression\obj\Debug\netcoreapp3.0\Regular expression.dll
+C:\Users\Admin\Documents\Visual Studio 2019\Projects\Regular expression\Regular expression\obj\Debug\netcoreapp3.0\Regular expression.pdb
