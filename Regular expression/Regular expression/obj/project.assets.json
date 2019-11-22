@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Documents\\Visual Studio 2019\\Projects\\Regular expression\\Regular expression\\Regular expression.csproj",
+      "projectUniqueName": "C:\\Git\\Automats\\Regular expression\\Regular expression\\Regular expression.csproj",
       "projectName": "Regular expression",
-      "projectPath": "C:\\Users\\Admin\\Documents\\Visual Studio 2019\\Projects\\Regular expression\\Regular expression\\Regular expression.csproj",
+      "projectPath": "C:\\Git\\Automats\\Regular expression\\Regular expression\\Regular expression.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Documents\\Visual Studio 2019\\Projects\\Regular expression\\Regular expression\\obj\\",
+      "outputPath": "C:\\Git\\Automats\\Regular expression\\Regular expression\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

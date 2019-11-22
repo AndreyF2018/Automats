@@ -9,3 +9,14 @@ C:\Users\Admin\Documents\Visual Studio 2019\Projects\Regular expression\Regular 
 C:\Users\Admin\Documents\Visual Studio 2019\Projects\Regular expression\Regular expression\obj\Debug\netcoreapp3.0\Regular expression.AssemblyInfo.cs
 C:\Users\Admin\Documents\Visual Studio 2019\Projects\Regular expression\Regular expression\obj\Debug\netcoreapp3.0\Regular expression.dll
 C:\Users\Admin\Documents\Visual Studio 2019\Projects\Regular expression\Regular expression\obj\Debug\netcoreapp3.0\Regular expression.pdb
+C:\Git\Automats\Regular expression\Regular expression\bin\Debug\netcoreapp3.0\Regular expression.exe
+C:\Git\Automats\Regular expression\Regular expression\bin\Debug\netcoreapp3.0\Regular expression.deps.json
+C:\Git\Automats\Regular expression\Regular expression\bin\Debug\netcoreapp3.0\Regular expression.runtimeconfig.json
+C:\Git\Automats\Regular expression\Regular expression\bin\Debug\netcoreapp3.0\Regular expression.runtimeconfig.dev.json
+C:\Git\Automats\Regular expression\Regular expression\bin\Debug\netcoreapp3.0\Regular expression.dll
+C:\Git\Automats\Regular expression\Regular expression\bin\Debug\netcoreapp3.0\Regular expression.pdb
+C:\Git\Automats\Regular expression\Regular expression\obj\Debug\netcoreapp3.0\Regular expression.csprojAssemblyReference.cache
+C:\Git\Automats\Regular expression\Regular expression\obj\Debug\netcoreapp3.0\Regular expression.AssemblyInfoInputs.cache
+C:\Git\Automats\Regular expression\Regular expression\obj\Debug\netcoreapp3.0\Regular expression.AssemblyInfo.cs
+C:\Git\Automats\Regular expression\Regular expression\obj\Debug\netcoreapp3.0\Regular expression.dll
+C:\Git\Automats\Regular expression\Regular expression\obj\Debug\netcoreapp3.0\Regular expression.pdb
